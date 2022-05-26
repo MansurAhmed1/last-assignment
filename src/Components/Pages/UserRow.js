@@ -57,7 +57,9 @@ const UserRow = ({ user, refetch }) => {
         )}
       </td>
       <td>
-        <button onClick={()=>handleDelete(_id)} class="btn btn-xs">Remove User</button>
+        <button onClick={() => handleDelete(_id)} class="btn btn-xs">
+          Remove User
+        </button>
       </td>
     </tr>
   );

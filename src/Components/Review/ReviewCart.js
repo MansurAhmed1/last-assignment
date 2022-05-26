@@ -7,7 +7,7 @@
 //     return (
 //         <div>
             
-//             {/* <div className='flex justify-between items-center'>
+//             {/* <div       className='flex justify-between items-center'>
 //                 <div>
 //                     <img src={img} alt="" />
 //                     <p>{name}</p>
@@ -15,7 +15,7 @@
 //                 <div>
 //                     rating
 //                 </div>
-//                 <div className='py-4'>
+//                 <div       className='py-4'>
 //                    {
 //                        review
 //                    }

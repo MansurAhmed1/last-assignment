@@ -30,18 +30,16 @@ const MakeAdmin = () => {
 
   return (
     <div>
-      {/* <h2 className="text-2xl my-6 font-semibold text-center">
+      {/* <h2       className="text-2xl my-6 font-semibold text-center">
       all user{users.length}
       </h2> */}
-      {/* <button class="btn gap-2">
+      {/* <button    className="btn gap-2">
   All user
-  <div class="badge">{users.length}</div>
+  <div    className="badge">{users.length}</div>
 </button> */}
 
-
-
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>

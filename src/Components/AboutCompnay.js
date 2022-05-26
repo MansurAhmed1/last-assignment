@@ -52,7 +52,9 @@ const AboutCompnay = () => {
   ];
   return (
     <div className="shadow-lg mb-24 my-36">
-      <h1 className=" mt-24 text-3xl pb-16 font-bold  text-black">About Our Company</h1>
+      <h1 className=" mt-24 text-3xl pb-16 font-bold  text-black">
+        About Our Company
+      </h1>
 
       <div className="grid w-11/12 mx-auto   grid-cols-1 md:grid-cols-2 ">
         <div className=" text-justify ">
@@ -72,7 +74,7 @@ const AboutCompnay = () => {
             given over $150 million in cash and product grants to other groups.
           </div>
           <div className="pt-4">
-            <button class="btn   rounded-none hover:bg-white btn-success">
+            <button className="btn   rounded-none hover:bg-white btn-success">
               More About Us
             </button>
           </div>

@@ -17,8 +17,8 @@ const [user]=useAuthState(auth)
   };
   return (
     <div className="bg-neutral-900 ">
-      <nav class=" border-gray-200 px-2 sm:px-4  py-3 rounded dark:bg-gray-800">
-        <div class="container  flex flex-wrap  justify-between items-center mx-auto">
+      <nav className=" border-gray-200 px-2 sm:px-4  py-3 rounded dark:bg-gray-800">
+        <div className="container  flex flex-wrap  justify-between items-center mx-auto">
           <button
             style={{ width: "15px" }}
             class="flex mr-3 text-sm lg:hidden rounded-full  md:mr-0 dark:focus:ring-gray-600 focus:ring-4 focus:ring-gray-300"
@@ -27,7 +27,7 @@ const [user]=useAuthState(auth)
             type="button"
             data-dropdown-toggle="dropdown"
           >
-            <span class="sr-only">Open user menu</span>
+            <span className="sr-only">Open user menu</span>
 
             <label
               for="my-drawer-2"
@@ -42,13 +42,13 @@ const [user]=useAuthState(auth)
             </label>
           </button>
 
-          <a href="https://flowbite.com" class="flex items-center ">
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          <a href="https://flowbite.com" className="flex items-center ">
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               Flowbite
             </span>
           </a>
 
-          <div class="flex bg-neutral-800 lg:hidden items-center md:order-2">
+          <div className="flex bg-neutral-800 lg:hidden items-center md:order-2">
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -56,7 +56,7 @@ const [user]=useAuthState(auth)
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
-              <span class="sr-only">Open main menu</span>
+              <span className="sr-only">Open main menu</span>
               <svg
                 class="w-6 h-6"
                 fill="currentColor"
@@ -87,14 +87,21 @@ const [user]=useAuthState(auth)
             class="hidden justify-items-end    items-center w-full md:flex md:w-auto md:order-1"
             id="mobile-menu-2"
           >
-            <ul class="flex flex-col items-center  text-base mt-4 md:flex-row md:space-x-8 md:mt-0  md:font-medium">
+            <ul className="flex flex-col items-center  text-base mt-4 md:flex-row md:space-x-8 md:mt-0  md:font-medium">
               <li>
                 <CustomLink to={"/"}>Home</CustomLink>
               </li>
-
+              <li>
+                <CustomLink to={"/portfolio"}>Portfolio</CustomLink>
+              </li>
+              <li>
+                <CustomLink to={"/blog"}>Blog</CustomLink>
+              </li>
               {/* <li>
                 <Link to={""}>Purchase</Link>
               </li> */}
+
+
               {user && (
                 <li>
                   <CustomLink to="/dashboard">Dashboard</CustomLink>

@@ -46,8 +46,8 @@ const ManagaeProduct = () => {
 
   return (
     <div>
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>No</th>
@@ -56,7 +56,6 @@ const ManagaeProduct = () => {
               <th>Product Price</th>
               <th>Product Quantity</th>
               <th>DELETE </th>
-            
             </tr>
           </thead>
           <tbody>
@@ -66,7 +65,7 @@ const ManagaeProduct = () => {
                   <td>{index + 1}</td>
                   <td>
                     <div className="avatar">
-                      <div class="w-8 rounded">
+                      <div className="w-8 rounded">
                         <img
                           src={product.image}
                           alt="Tailwind-CSS-Avatar-component"
@@ -87,7 +86,6 @@ const ManagaeProduct = () => {
                       delete
                     </button>
                   </td>
-                 
                 </tr>
               </>
             ))}

@@ -6,27 +6,31 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div  className=' bg-indigo-50 px-10 py-14 my-15  w-11/12 mx-auto'>
-      <div className='text-center pb-14 text-white'>
-        <h1 className='text-4xl text-black'>Stay connected with us</h1>
+    <div className=" bg-indigo-50 px-10 py-14 my-15  w-11/12 mx-auto">
+      <div className="text-center pb-14 text-white">
+        <h1 className="text-4xl text-black">Stay connected with us</h1>
       </div>
-      <div className='grid   grid-cols-1 justify-items-center gap-5'>
+      <div className="grid   grid-cols-1 justify-items-center gap-5">
         <input
-          type='text'
-          placeholder='Email Address'
-          className='input w-full max-w-md'
+          type="text"
+          placeholder="Email Address"
+          className="input w-full max-w-md"
         />
         <input
-          type='text'
-          placeholder='Subject'
-          className='input w-full max-w-md'
+          type="text"
+          placeholder="Subject"
+          className="input w-full max-w-md"
         />
         <textarea
-          className='textarea w-full max-w-md'
-          placeholder='Your message'
+          className="textarea w-full max-w-md"
+          placeholder="Your message"
           rows={6}
         ></textarea>
-       <input type="submit" className="btn btn-wide btn-primary" value="Submit" />
+        <input
+          type="submit"
+          className="btn btn-wide btn-primary"
+          value="Submit"
+        />
       </div>
     </div>
   );

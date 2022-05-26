@@ -41,8 +41,8 @@ const ManageAllOrders = () => {
 
   return (
     <div>
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>Product</th>
@@ -53,8 +53,6 @@ const ManageAllOrders = () => {
               <th>Ship Now </th>
               <th>Shipped </th>
               <th>payment </th>
-
-         
             </tr>
           </thead>
           <tbody>
@@ -82,20 +80,24 @@ const ManageAllOrders = () => {
                       >
                         Ship Now
                       </button>
-                    ):""}
+                    ) : (
+                      ""
+                    )}
                   </td>
                   <td>
                     {order?.shipped && (
-                      <button class="btn btn-sm">Shipped</button>
+                      <button className="btn btn-sm">Shipped</button>
                     )}
                   </td>
 
                   <td>
                     {order.paid ? (
-                      <button class="btn btn-sm">paid</button>
+                      <button className="btn btn-sm">paid</button>
                     ) : (
-                        <span className="text-sm font-semibold">
-                       <button class="btn btn-active btn-ghost btn-sm">unpaid</button>
+                      <span className="text-sm font-semibold">
+                        <button className="btn btn-active btn-ghost btn-sm">
+                          unpaid
+                        </button>
                       </span>
                     )}
                   </td>

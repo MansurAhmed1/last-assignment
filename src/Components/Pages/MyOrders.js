@@ -58,8 +58,8 @@ const MyOrders = () => {
 
   return (
     <div>
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>Product</th>
@@ -81,24 +81,24 @@ const MyOrders = () => {
                   <th>{order.productQuantity}</th>
                   <td>
                     <button
-
-                    disabled={order.transactionId}
+                      disabled={order.transactionId}
                       onClick={() => {
                         handleDelete(order._id);
                       }}
                       class="btn btn-sm"
                     >
-                      
                       delete
                     </button>
                   </td>
 
                   <td>
-                    {
-                      order.paid ? <button class="btn btn-sm">paid</button>:<button class="btn btn-sm">
-                      <Link to={`pay/${order._id}`}> pay</Link>
-                    </button>
-                    }
+                    {order.paid ? (
+                      <button className="btn btn-sm">paid</button>
+                    ) : (
+                      <button className="btn btn-sm">
+                        <Link to={`pay/${order._id}`}> pay</Link>
+                      </button>
+                    )}
                   </td>
                   <td>{order.transactionId}</td>
                 </tr>

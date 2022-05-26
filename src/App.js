@@ -6,12 +6,15 @@ import "./App.css";
 import Footer from "./Components/HomePage/Footer";
 import Header from "./Components/HomePage/Header";
 import Home from "./Components/HomePage/Home";
+import NotFoundPage from "./Components/HomePage/NotFoundPage";
 import Login from "./Components/LogIn/Login";
 import Register from "./Components/LogIn/Register";
 import RequireAdmin from "./Components/LogIn/RequireAdmin";
 import RequireAuth from "./Components/LogIn/RequireAuth";
+import MyPortFolio from "./Components/MyPortFolio";
 import AddeAProduct from "./Components/Pages/AddeAProduct";
 import AddReview from "./Components/Pages/AddReview";
+import Blog from "./Components/Pages/Blog";
 import Dashboard from "./Components/Pages/Dashboard";
 import MakeAdmin from "./Components/Pages/MakeAdmin";
 import ManagaeProduct from "./Components/Pages/ManagaeProduct";
@@ -74,14 +77,17 @@ function App() {
             }
           ></Route>
         </Route>
-  
+
+     
+        <Route path="/portfolio" element={<MyPortFolio></MyPortFolio>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/loading" element={<Loading></Loading>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/*" element={<NotFoundPage></NotFoundPage>}></Route>
         <Route path="/purchase/:id" element={<Purchase></Purchase>}></Route>
       </Routes>
       <Footer></Footer>
-     
     </div>
   );
 }

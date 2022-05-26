@@ -87,241 +87,200 @@ const AddeAProduct = () => {
   
 
   return (
-      
+    <div className="mb-14">
+      <ToastContainer></ToastContainer>
+      <h2 className="text-2xl text-center font-semibold pt-6">
+        Added Your Product
+      </h2>
+      <div className="flex justify-center items-center">
+        <form
+          style={{ width: "60%" }}
+          className=""
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className="form-control w-full  ">
+            <label className="label">
+              <span className="label-text">Product Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Product Name"
+              className="input input-bordered w-full "
+              {...register("ProductName ", {
+                required: {
+                  value: true,
+                  message: "Product Name  is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.ProductName?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.ProductName.message}
+                </span>
+              )}
+            </label>
+          </div>
 
+          <div className="form-control w-full  ">
+            <label className="label">
+              <span className="label-text">Enter Your Email</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              className="input input-bordered w-full "
+              {...register("email ", {
+                required: {
+                  value: "true",
+                  message: "Email is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.email?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.email.message}
+                </span>
+              )}
+            </label>
+          </div>
 
-<div className="mb-14">
-<ToastContainer></ToastContainer>
-<h2 className="text-2xl text-center font-semibold pt-6">Added Your  Product</h2>
-<div className="flex justify-center items-center">
-<form style={{width:"60%"}} className="" onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text">Product Price</span>
+            </label>
+            <input
+              type="number"
+              //    value={user?.email}
 
-<div className="form-control w-full  ">
-<label className="label">
-   <span className="label-text">Product Name</span>
- </label>
- <input
-   type="text"
-   placeholder="Enter Product Name"
-   className="input input-bordered w-full "
- 
-   
-   
-   {...register("ProductName ", {
-     required: {
-       value: true,
-       message: "Product Name  is Required"
-     }
-   })}
- />
- <label className="label">
-   {errors.ProductName?.type === "required" && (
-     <span className="label-text-alt text-red-500">
-       {errors.ProductName.message}
-     </span>
-   )}
- </label>
-</div>
+              placeholder="Enter Product Price"
+              className="input input-bordered w-full "
+              {...register("price", {
+                required: {
+                  value: true,
+                  message: "Product Price is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.price?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.price.message}
+                </span>
+              )}
+            </label>
+          </div>
 
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text">Available Quantity </span>
+            </label>
+            <input
+              type="number"
+              //    value={user?.email}
 
+              placeholder="Enter Quantity"
+              className="input input-bordered w-full "
+              {...register("quantity", {
+                required: {
+                  value: true,
+                  message: "Quantity is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.quantity?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.quantity.message}
+                </span>
+              )}
+            </label>
+          </div>
 
-<div className="form-control w-full  ">
-<label className="label">
-   <span className="label-text">Enter Your Email</span>
- </label>
- <input
-   type="text"
-   placeholder="Enter Your Email"
-   className="input input-bordered w-full "
- 
-   
-   
-   {...register("email ", {
-     required: {
-       value: 'true',
-       message: "Email is Required"
-     }
-   })}
- />
- <label className="label">
-   {errors.email?.type === "required" && (
-     <span className="label-text-alt text-red-500">
-       {errors.email.message}
-     </span>
-   )}
- </label>
-</div>
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text">Minimum Order Quantity</span>
+            </label>
+            <input
+              type="number"
+              //    value={user?.email}
 
+              placeholder="Enter Minimum Product Quantity"
+              className="input input-bordered w-full "
+              {...register("minimumQuantity", {
+                required: {
+                  value: true,
+                  message: "Minimum Quantity is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.minimumQuantity?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.minimumQuantity.message}
+                </span>
+              )}
+            </label>
+          </div>
 
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text">Photo</span>
+            </label>
+            <input
+              type="file"
+              className="input input-bordered w-full "
+              {...register("image", {
+                required: {
+                  value: true,
+                  message: "Image is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.image?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.image.message}
+                </span>
+              )}
+            </label>
+          </div>
 
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text">Product Description</span>
+            </label>
+            <input
+              type="text"
+              //    value={user?.email}
 
+              placeholder="Enter Product Description"
+              className="input input-bordered w-full "
+              {...register("description", {
+                required: {
+                  value: true,
+                  message: "description is Required"
+                }
+              })}
+            />
+            <label className="label">
+              {errors.description?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.description.message}
+                </span>
+              )}
+            </label>
+          </div>
 
-
-
-
-<div className="form-control w-full ">
-<label className="label">
-   <span className="label-text">Product Price</span>
- </label>
- <input
-   type="number"
-//    value={user?.email}
-  
-  
-   placeholder="Enter Product Price"
-   className="input input-bordered w-full "
-   {...register("price", {
-     required: {
-       value: true,
-       message: "Product Price is Required"
-     },
-   })}
- />
- <label className="label">
-   {errors.price?.type === "required" && (
-     <span className="label-text-alt text-red-500">
-       {errors.price.message}
-     </span>
- 
-   )}
- </label>
-</div>
-
-
-
-<div className="form-control w-full ">
-<label className="label">
-   <span className="label-text">Available Quantity </span>
- </label>
- <input
-   type="number"
-//    value={user?.email}
-  
-  
-   placeholder="Enter Quantity"
-   className="input input-bordered w-full "
-   {...register("quantity", {
-     required: {
-       value: true,
-       message: "Quantity is Required"
-     },
-   })}
- />
- <label className="label">
-   {errors.quantity?.type === "required" && (
-     <span className="label-text-alt text-red-500">
-       {errors.quantity.message}
-     </span>
-  
-   )}
- </label>
-</div>
-
-
-
-
-<div className="form-control w-full ">
-<label className="label">
-   <span className="label-text">Minimum Order Quantity</span>
- </label>
- <input
-   type="number"
-//    value={user?.email}
-  
-  
-   placeholder="Enter Minimum Product Quantity"
-   className="input input-bordered w-full "
-   {...register("minimumQuantity", {
-     required: {
-       value: true,
-       message: "Minimum Quantity is Required"
-     },
-   })}
- />
- <label className="label">
-   {errors.minimumQuantity?.type === "required" && (
-     <span className="label-text-alt text-red-500">
-       {errors.minimumQuantity.message}
-     </span>
- 
-   )}
- </label>
-</div>
-
-
-<div className="form-control w-full ">
-          <label className="label">
-            <span className="label-text">Photo</span>
-          </label>
           <input
-            type="file"
-            className="input input-bordered w-full "
-            {...register("image", {
-              required: {
-                value: true,
-                message: "Image is Required"
-              }
-            })}
+            className="btn w-full btn-primary  hover:bg-stone-700 text-white"
+            type="submit"
+            value="conform order"
           />
-          <label className="label">
-            {errors.image?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.image.message}
-              </span>
-            )}
-          </label>
-        </div>
-
-
-
-
-<div className="form-control w-full ">
-<label className="label">
-   <span className="label-text">Product Description</span>
- </label>
- <input
-   type="text"
-//    value={user?.email}
-  
-  
-   placeholder="Enter Product Description"
-   className="input input-bordered w-full "
-   {...register("description", {
-     required: {
-       value: true,
-       message: "description is Required"
-     },
-   })}
- />
- <label className="label">
-   {errors.description?.type === "required" && (
-     <span className="label-text-alt text-red-500">
-       {errors.description.message}
-     </span>
- 
-   )}
- </label>
-</div>
-
-
-
-
-
-
-
-
-
- <input
-  className="btn w-full btn-primary  hover:bg-stone-700 text-white"
-  type="submit"
- value="conform order"
- />
- </form>
- </div>
-
-</div>
-
-
+        </form>
+      </div>
+    </div>
   );
 };
 
