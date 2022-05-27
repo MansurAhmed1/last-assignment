@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
       shipped: true,
       pending: false
     };
-    const url = ` http://localhost:5000/order/update/${id}`;
+    const url = `  https://glacial-oasis-21847.herokuapp.com/order/update/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -28,7 +28,7 @@ const ManageAllOrders = () => {
   };
 
   useEffect(() => {
-    fetch(" http://localhost:5000/orders")
+    fetch("  https://glacial-oasis-21847.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

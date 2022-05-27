@@ -48,7 +48,7 @@ const MyProfile = () => {
             name: user?.displayName
           };
 
-          const url = " http://localhost:5000/profile";
+          const url = "  https://glacial-oasis-21847.herokuapp.com/profile";
           fetch(url, {
             method: "POST",
             headers: {
@@ -73,7 +73,7 @@ const MyProfile = () => {
   const [profileData, setProfileData] = useState([]);
   useEffect(() => {
     const email = user?.email;
-    fetch(` http://localhost:5000/profile?email=${email}`)
+    fetch(`  https://glacial-oasis-21847.herokuapp.com/profile?email=${email}`)
       .then((res) => res.json())
       .then((data) => setProfileData(data));
   }, [user, profileData]);

@@ -12,7 +12,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const procced = window.confirm("Are You sure Want to delete this book?");
     if (procced) {
-      const url = ` http://localhost:5000/delete/${id}`;
+      const url = `  https://glacial-oasis-21847.herokuapp.com/delete/${id}`;
       fetch(url, {
         method: "DELETE"
       })
@@ -25,14 +25,7 @@ const MyOrders = () => {
     const email = user?.email;
 
     if (email) {
-      //   fetch(` http://localhost:5000/order?email=${email}`, {
-      //     method: "GET",
-      //     // headers: {
-      //     //   "content-type": "application/json",
-      //     //   authorization: `Bearer ${localStorage.getItem("accessToken")}`
-      //     // }
-      //   })
-      fetch(`http://localhost:5000/order?email=${email}`)
+      fetch(` https://glacial-oasis-21847.herokuapp.com/order?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
@@ -69,7 +62,7 @@ const MyOrders = () => {
                       onClick={() => {
                         handleDelete(order._id);
                       }}
-                      class="btn btn-sm"
+                      class="btn btn-sm btn-accent"
                     >
                       delete
                     </button>
@@ -80,10 +73,10 @@ const MyOrders = () => {
                       <button className="btn btn-sm">paid</button>
                     ) : (
                       <Link
-                        className="btn btn-sm"
+                        className="btn btn-sm btn-primary"
                         to={`/payment/${order?._id}`}
                       >
-                        <button>pay</button>
+                        <button >pay</button>
                       </Link>
                     )}
                   </td>

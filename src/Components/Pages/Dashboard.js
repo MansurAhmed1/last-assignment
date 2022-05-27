@@ -31,10 +31,12 @@ const Dashboard = () => {
         <li>
             <CustomLink to="/dashboard">My Profle</CustomLink>
           </li>
+         {
+           !admin && <> <li>
+           <CustomLink to="/dashboard/addreview">Add Review</CustomLink>
+         </li></>
+         }
          
-          <li>
-            <CustomLink to="/dashboard/addreview">Add Review</CustomLink>
-          </li>
         
           
           <li>

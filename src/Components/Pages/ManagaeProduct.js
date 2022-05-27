@@ -13,7 +13,7 @@ const ManagaeProduct = () => {
   const handleDelete = (id) => {
     const procced = window.confirm("Are You sure Want to delete this book?");
     if (procced) {
-      const url = ` http://localhost:5000/deleteproduct/${id}`;
+      const url = `  https://glacial-oasis-21847.herokuapp.com/deleteproduct/${id}`;
       fetch(url, {
         method: "DELETE"
       })
@@ -26,14 +26,14 @@ const ManagaeProduct = () => {
   };
 
   useEffect(() => {
-    //   fetch(` http://localhost:5000/order?email=${email}`, {
+    //   fetch(`  https://glacial-oasis-21847.herokuapp.com/order?email=${email}`, {
     //     method: "GET",
     //     // headers: {
     //     //   "content-type": "application/json",
     //     //   authorization: `Bearer ${localStorage.getItem("accessToken")}`
     //     // }
     //   })
-    fetch(" http://localhost:5000/service")
+    fetch("  https://glacial-oasis-21847.herokuapp.com/service")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

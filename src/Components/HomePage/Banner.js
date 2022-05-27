@@ -25,8 +25,8 @@ const Banner = () => {
                 alt=""
               />
              <div>
-                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
-                <p className="py-6">
+                <h1 className=" text-xl lg:text-5xl  font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6 text-lg text-dark">
                  Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
@@ -35,8 +35,8 @@ const Banner = () => {
           </div>
         </div>
         {/* <!-- Item 2 --> */}
-        <div class=" h-full" data-carousel-item="active">
-          <div className="hero h-full bg-base-200 ">
+        <div class=" h-full " data-carousel-item="active">
+          <div className="hero h-full bg-base-200  ">
             <div className="hero-content flex-col lg:flex-row-reverse w-11/12  justify-center items-center  mx-auto">
               <img
                 src="https://media.istockphoto.com/photos/man-in-the-garage-is-checking-a-motorcycle-picture-id1363985678?k=20&m=1363985678&s=612x612&w=0&h=x2UlWVe6lCmKb8FfoSbFwQarHsgECNT2MuzhCwPfqTs="
@@ -44,11 +44,13 @@ const Banner = () => {
                 alt=""
               />
               <div>
-                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
-                <p className="py-6">
+                <div className="text-center">
+                <h1 className="text-3xl lg:text-5xl   font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6 text-lg text-dark" >
                  Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <button className="btn btn-primary ">Get Started</button>
+                </div>
               </div>
             </div>
           </div>
@@ -63,8 +65,8 @@ const Banner = () => {
                 alt=""
               />
                <div>
-                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
-                <p className="py-6">
+                <h1 className="text-3xl lg:text-5xl  font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6 text-lg text-dark">
                  Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
@@ -82,8 +84,8 @@ const Banner = () => {
                 alt=""
               />
                <div>
-                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
-                <p className="py-6">
+                <h1 className="text-3xl lg:text-5xl font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6 text-lg text-dark">
                  Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
@@ -101,8 +103,8 @@ const Banner = () => {
                 alt=""
               />
               <div>
-                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
-                <p className="py-6">
+                <h1 className="text-3xl lg:text-5xl  font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6 text-lg text-dark">
                  Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
