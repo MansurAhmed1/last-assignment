@@ -55,7 +55,7 @@ const AddReview = () => {
           // send to your database
          
 
-          const url = " https://glacial-oasis-21847.herokuapp.com/reviews";
+          const url = " http://localhost:5000/reviews";
           fetch(url, {
            method: "POST",
            headers: {

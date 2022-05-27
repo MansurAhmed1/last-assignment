@@ -1,5 +1,5 @@
 /** @format */
-//https://glacial-oasis-21847.herokuapp.com/
+//http://localhost:5000/
 import React from "react";
 import { useQuery } from "react-query";
 import Loading from "../Shared/Loading";
@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch
   } = useQuery("users", () =>
-    fetch(" https://glacial-oasis-21847.herokuapp.com/user", {
+    fetch(" http://localhost:5000/user", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`

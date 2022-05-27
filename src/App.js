@@ -22,7 +22,8 @@ import MyOrders from "./Components/Pages/MyOrders";
 import MyProfile from "./Components/Pages/MyProfile";
 import Payment from "./Components/Pages/Payment";
 import Purchase from "./Components/Pages/Purchase";
-import Practice from "./Components/Practice";
+import Problem from "./Components/Problem";
+
 
 import Loading from "./Components/Shared/Loading";
 
@@ -42,9 +43,11 @@ function App() {
           }
         >
           <Route index element={<MyProfile></MyProfile>}></Route>
+        
+          <Route path="myprofile" element={<MyProfile></MyProfile>}></Route> 
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
         
-          <Route path="payment/:id" element={<Payment></Payment>}></Route>
+         
           <Route path="myorder" element={<MyOrders></MyOrders>}></Route>
 
        
@@ -80,11 +83,15 @@ function App() {
               </RequireAdmin>
             }
           ></Route>
+
+
+        
         </Route>
         
-
+        <Route path="/payment/:id" element={<Payment></Payment>}></Route>
         <Route path="/portfolio" element={<MyPortFolio></MyPortFolio>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+       
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/loading" element={<Loading></Loading>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>

@@ -17,7 +17,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
-  const url = `https://glacial-oasis-21847.herokuapp.com/pay/${id}`;
+  const url = `http://localhost:5000/pay/${id}`;
 
   const { data: pay, isLoading } = useQuery(["pay", id], () =>
     fetch(url, {

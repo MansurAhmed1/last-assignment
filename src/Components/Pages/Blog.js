@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -8,6 +9,11 @@ const Blog = () => {
       <h1 className="text-xl font-bold">
         What are the different ways to manage a state in a React application:
       </h1>
+
+     
+            <Link to={`/dashboard/problem/${111}`}>problem</Link>
+         
+
       <p>
         There are four main types of state you need to properly manage in your
         React apps:

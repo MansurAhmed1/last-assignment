@@ -19,7 +19,7 @@ const CheckoutForm = ({ pay }) => {
 
   useEffect(() => {
     if (productPrice) {
-      fetch("https://glacial-oasis-21847.herokuapp.com/create-payment-intent", {
+      fetch("http://localhost:5000/create-payment-intent", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -83,7 +83,7 @@ const CheckoutForm = ({ pay }) => {
         order: _id,
         transactionId: paymentIntent.id
       };
-      fetch(`https://glacial-oasis-21847.herokuapp.com/pay/${_id}`, {
+      fetch(`http://localhost:5000/pay/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

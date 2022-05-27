@@ -15,7 +15,7 @@ const Purchase = () => {
 
 
   useEffect(() => {
-    fetch(` https://glacial-oasis-21847.herokuapp.com/service/${id}`)
+    fetch(` http://localhost:5000/service/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [order, id]);
@@ -51,7 +51,7 @@ const Purchase = () => {
       e.target.productQuantity.value >= order?.minimumquantity &&
       e.target.productQuantity.value <= order?.avaialbequantit
     ) {
-      const url = " https://glacial-oasis-21847.herokuapp.com/order";
+      const url = " http://localhost:5000/order";
       fetch(url, {
         method: "POST",
         headers: {
