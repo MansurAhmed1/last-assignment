@@ -1,8 +1,7 @@
 /** @format */
 
 import { Route, Routes } from "react-router-dom";
-import {ToastContainer} from "react-toastify";
-import "./App.css";
+
 import Footer from "./Components/HomePage/Footer";
 import Header from "./Components/HomePage/Header";
 import Home from "./Components/HomePage/Home";
@@ -23,6 +22,8 @@ import MyOrders from "./Components/Pages/MyOrders";
 import MyProfile from "./Components/Pages/MyProfile";
 import Payment from "./Components/Pages/Payment";
 import Purchase from "./Components/Pages/Purchase";
+import Practice from "./Components/Practice";
+
 import Loading from "./Components/Shared/Loading";
 
 function App() {
@@ -40,10 +41,13 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route path="" element={<MyOrders></MyOrders>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
-          <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="pay/:id" element={<Payment></Payment>}></Route>
+        
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          <Route path="myorder" element={<MyOrders></MyOrders>}></Route>
+
+       
           <Route
             path="addproduct"
             element={
@@ -77,15 +81,24 @@ function App() {
             }
           ></Route>
         </Route>
+        
 
-     
         <Route path="/portfolio" element={<MyPortFolio></MyPortFolio>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/loading" element={<Loading></Loading>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/*" element={<NotFoundPage></NotFoundPage>}></Route>
-        <Route path="/purchase/:id" element={<Purchase></Purchase>}></Route>
+
+        <Route
+          path="/purchase/:id"
+          element={
+            <RequireAuth>
+              <Purchase></Purchase>
+            </RequireAuth>
+          }
+        ></Route>
+
+        <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
@@ -93,3 +106,4 @@ function App() {
 }
 
 export default App;
+

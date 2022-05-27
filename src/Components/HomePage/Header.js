@@ -44,7 +44,7 @@ const [user]=useAuthState(auth)
 
           <a href="https://flowbite.com" className="flex items-center ">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Bike Instrument
             </span>
           </a>
 

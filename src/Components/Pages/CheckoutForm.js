@@ -11,28 +11,30 @@ const CheckoutForm = ({ pay }) => {
   const elements = useElements();
   const [cardError, setCardError] = useState("");
   const [success, setSuccess] = useState("");
-  const [ setProcessing] = useState(false);
+  const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`
-      },
-      body: JSON.stringify({ price: productPrice })
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.clientSecret) {
-          setClientSecret(data.clientSecret);
-        }
-      });
-  }, [clientSecret]);
+    if (productPrice) {
+      fetch("https://glacial-oasis-21847.herokuapp.com/create-payment-intent", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        },
+        body: JSON.stringify({ price: productPrice })
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.clientSecret) {
+            setClientSecret(data.clientSecret);
+          }
+        });
+    }
+  }, [productPrice]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -73,7 +75,7 @@ const CheckoutForm = ({ pay }) => {
     } else {
       setCardError("");
       setTransactionId(paymentIntent.id);
-  
+
       setSuccess("Congrats! Your payment is completed.");
 
       //store payment on database
@@ -81,7 +83,7 @@ const CheckoutForm = ({ pay }) => {
         order: _id,
         transactionId: paymentIntent.id
       };
-      fetch(`http://localhost:5000/pay/${_id}`, {
+      fetch(`https://glacial-oasis-21847.herokuapp.com/pay/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
@@ -92,7 +94,6 @@ const CheckoutForm = ({ pay }) => {
         .then((res) => res.json())
         .then((data) => {
           setProcessing(false);
-         
         });
     }
   };

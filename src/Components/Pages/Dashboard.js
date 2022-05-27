@@ -28,30 +28,33 @@ const Dashboard = () => {
       <div className="drawer-side ">
         <label for="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-60 bg-slate-50 text-base-content">
-          {/* <!-- Sidebar content here --> */}
-          <li>
-            <CustomLink to="">My Order</CustomLink>
+        <li>
+            <CustomLink to="/dashboard">My Profle</CustomLink>
           </li>
+         
           <li>
-            <CustomLink to="addreview">Add Review</CustomLink>
+            <CustomLink to="/dashboard/addreview">Add Review</CustomLink>
           </li>
+          
           <li>
-            <CustomLink to="myprofile">My Profile</CustomLink>
+            <CustomLink to="/dashboard/myorder">My Order</CustomLink>
           </li>
+       
           {admin && (
             <>
               <li>
-                <CustomLink to="addproduct">Add Product</CustomLink>
+                <CustomLink to="/dashboard/addproduct">Add Product</CustomLink>
               </li>
               <li>
-                <CustomLink to="manageorder">Manage Order</CustomLink>
+                <CustomLink to="/dashboard/manageorder">Manage Order</CustomLink>
               </li>
               <li>
-                <CustomLink to="manageproduct">Manage Product</CustomLink>
+                <CustomLink to="/dashboard/manageproduct">Manage Product</CustomLink>
               </li>
               <li>
-                <CustomLink to="makeadmin">Make Admin</CustomLink>
+                <CustomLink to="/dashboard/makeadmin">Make Admin</CustomLink>
               </li>
+              
             </>
           )}
         </ul>

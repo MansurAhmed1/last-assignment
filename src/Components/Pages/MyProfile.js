@@ -25,7 +25,6 @@ const MyProfile = () => {
   //// //////////////imgbb api key////////////////////
 
   const onSubmit = async (data) => {
-   
     const image = data.image[0];
     const formData = new FormData();
     formData.append("image", image);
@@ -37,10 +36,9 @@ const MyProfile = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-      
         if (result.success) {
           const img = result.data.url;
-          
+
           const profile = {
             email: user?.email,
             image: img,
@@ -49,9 +47,8 @@ const MyProfile = () => {
             linkdin: data.linkdin,
             name: user?.displayName
           };
-         
 
-          const url = "http://localhost:5000/profile";
+          const url = " https://glacial-oasis-21847.herokuapp.com/profile";
           fetch(url, {
             method: "POST",
             headers: {
@@ -76,7 +73,7 @@ const MyProfile = () => {
   const [profileData, setProfileData] = useState([]);
   useEffect(() => {
     const email = user?.email;
-    fetch(`http://localhost:5000/profile?email=${email}`)
+    fetch(` https://glacial-oasis-21847.herokuapp.com/profile?email=${email}`)
       .then((res) => res.json())
       .then((data) => setProfileData(data));
   }, [user, profileData]);

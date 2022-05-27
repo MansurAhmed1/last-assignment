@@ -24,12 +24,10 @@ const Banner = () => {
                 class="w-3/5 max-w-sm rounded-lg shadow-2xl "
                 alt=""
               />
-              <div className="">
-                <h1 className="text-5xl font-bold">Box Office News!</h1>
+             <div>
+                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
                 <p className="py-6">
-                  1 Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi
+                 Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
               </div>
@@ -46,13 +44,9 @@ const Banner = () => {
                 alt=""
               />
               <div>
-                <h1 className="md:text-5xl text-2xl font-bold">
-                  Box Office News!
-                </h1>
+                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
                 <p className="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.2
+                 Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
               </div>
@@ -68,14 +62,12 @@ const Banner = () => {
                 class="w-3/5 rounded-lg shadow-2xl"
                 alt=""
               />
-              <div>
-                <h1 class="text-5xl font-bold">Box Office News!</h1>
-                <p class="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.3
+               <div>
+                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6">
+                 Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
-                <button class="btn btn-primary">Get Started</button>
+                <button className="btn btn-primary">Get Started</button>
               </div>
             </div>
           </div>
@@ -89,14 +81,12 @@ const Banner = () => {
                 class="w-3/5 rounded-lg shadow-2xl"
                 alt=""
               />
-              <div>
-                <h1 class="text-5xl font-bold">Box Office News!</h1>
-                <p class="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.4
+               <div>
+                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
+                <p className="py-6">
+                 Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
-                <button class="btn btn-primary">Get Started</button>
+                <button className="btn btn-primary">Get Started</button>
               </div>
             </div>
           </div>{" "}
@@ -111,11 +101,9 @@ const Banner = () => {
                 alt=""
               />
               <div>
-                <h1 className="text-5xl font-bold">Box Office News!</h1>
+                <h1 className="text-5xl font-bold">Bike Instrumental Here!</h1>
                 <p className="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.5
+                 Our maket place is very popular bike instrumental market place.you wil get all parts of any bike.
                 </p>
                 <button className="btn btn-primary">Get Started</button>
               </div>

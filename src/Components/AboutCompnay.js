@@ -52,7 +52,7 @@ const AboutCompnay = () => {
   ];
   return (
     <div className="shadow-lg mb-24 my-36">
-      <h1 className=" mt-24 text-3xl pb-16 font-bold  text-black">
+      <h1 className=" mt-24 text-3xl pb-16 font-bold text-center text-black">
         About Our Company
       </h1>
 

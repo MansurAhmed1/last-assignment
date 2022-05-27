@@ -55,7 +55,7 @@ const AddReview = () => {
           // send to your database
          
 
-          const url = "http://localhost:5000/reviews";
+          const url = " https://glacial-oasis-21847.herokuapp.com/reviews";
           fetch(url, {
            method: "POST",
            headers: {
@@ -68,7 +68,7 @@ const AddReview = () => {
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted.insertedId) {
-                toast("Doctor added successfully");
+                toast("Review added successfully");
                 reset();
               } else {
                 toast("Failed to add the doctor");

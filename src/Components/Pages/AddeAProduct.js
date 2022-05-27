@@ -61,7 +61,7 @@ const AddeAProduct = () => {
           // send to your database
          
 
-          const url = "http://localhost:5000/added";
+          const url = " https://glacial-oasis-21847.herokuapp.com/added";
           fetch(url, {
            method: "POST",
            headers: {

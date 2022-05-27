@@ -17,7 +17,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
-  const url = `http://localhost:5000/pay/${id}`;
+  const url = `https://glacial-oasis-21847.herokuapp.com/pay/${id}`;
 
   const { data: pay, isLoading } = useQuery(["pay", id], () =>
     fetch(url, {
@@ -41,7 +41,7 @@ const Payment = () => {
         >
           <div class="card-body  mx-auto">
             <p className="text-success font-bold">Hello {user?.displayName}</p>
-            <h2 class="card-title">Please Pay for{pay.name} </h2>
+            <h2 class="card-title">Please Pay for{pay?.name} </h2>
             <p>
               <p className="text-orange-700">
                 Please pay: $ {pay.productPrice}
@@ -64,5 +64,3 @@ const Payment = () => {
 };
 
 export default Payment;
-
-  

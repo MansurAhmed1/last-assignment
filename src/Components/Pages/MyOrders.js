@@ -8,53 +8,40 @@ import auth from "../firebase.init";
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [user] = useAuthState(auth);
-  
 
   const handleDelete = (id) => {
     const procced = window.confirm("Are You sure Want to delete this book?");
     if (procced) {
-      const url = `http://localhost:5000/delete/${id}`;
+      const url = ` https://glacial-oasis-21847.herokuapp.com/delete/${id}`;
       fetch(url, {
         method: "DELETE"
       })
         .then((res) => res.json())
         .then((data) => {
-        
           const remaining = orders.filter((book) => book._id !== id);
           setOrders(remaining);
         });
     }
   };
 
-
-
-
-
-
-
-
-
-
   useEffect(() => {
     const email = user?.email;
 
     if (email) {
-      //   fetch(`http://localhost:5000/order?email=${email}`, {
+      //   fetch(` https://glacial-oasis-21847.herokuapp.com/order?email=${email}`, {
       //     method: "GET",
       //     // headers: {
       //     //   "content-type": "application/json",
       //     //   authorization: `Bearer ${localStorage.getItem("accessToken")}`
       //     // }
       //   })
-      fetch(`http://localhost:5000/order?email=${email}`)
+      fetch(`https://glacial-oasis-21847.herokuapp.com/order?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
         });
     }
   }, [user, orders]);
-
- 
 
   return (
     <div>
@@ -95,9 +82,12 @@ const MyOrders = () => {
                     {order.paid ? (
                       <button className="btn btn-sm">paid</button>
                     ) : (
-                      <button className="btn btn-sm">
-                        <Link to={`pay/${order._id}`}> pay</Link>
-                      </button>
+                      <Link
+                        className="btn btn-sm"
+                        to={`/dasboard/payment/${order?._id}`}
+                      >
+                        <button>pay</button>
+                      </Link>
                     )}
                   </td>
                   <td>{order.transactionId}</td>

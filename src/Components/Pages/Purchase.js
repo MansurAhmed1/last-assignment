@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../firebase.init";
-export const MyContext = React.createContext('hi');
+
 const Purchase = () => {
   const [user] = useAuthState(auth);
 
@@ -14,13 +14,13 @@ const Purchase = () => {
   console.log(id)
 
 
-  useEffect(()=> {
-    fetch(`http://localhost:5000/service/${id}`)
+  useEffect(() => {
+    fetch(` https://glacial-oasis-21847.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
-  },[order,id ]);
+  }, [order, id]);
 
-console.log(order)
+  console.log(order);
 
   const [disable, setDisable] = useState(false);
   const handleOnChange = (e) => {
@@ -28,11 +28,14 @@ console.log(order)
       setDisable(false);
     } else {
       setDisable(true);
+      toast.error(
+        "Please enter a value greater than the minimum quantity and less than the minimum quantity"
+      );
     }
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    
+
     const orderValue = {
       name: order.name,
       image: order.img,
@@ -48,7 +51,7 @@ console.log(order)
       e.target.productQuantity.value >= order?.minimumquantity &&
       e.target.productQuantity.value <= order?.avaialbequantit
     ) {
-      const url = "http://localhost:5000/order";
+      const url = " https://glacial-oasis-21847.herokuapp.com/order";
       fetch(url, {
         method: "POST",
         headers: {
@@ -77,7 +80,7 @@ console.log(order)
 
   return (
 
-    <MyContext.Provider value={[ setOrder]}>
+   
 
 
 <div className="bg-stone-100 mb-14 " >
@@ -221,7 +224,7 @@ console.log(order)
 </div>
 
 
- </MyContext.Provider>
+
 
   );
 };
