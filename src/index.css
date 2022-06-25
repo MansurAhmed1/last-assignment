@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a,.signOutButton{
+  font-family: 'Roboto Condensed', sans-serif;
+color: white;
+font-size: 16px;
+}  

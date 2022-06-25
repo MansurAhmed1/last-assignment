@@ -8,7 +8,7 @@ const useToken = (user) => {
     const email = user?.user?.email;
     const currentUser = { email: email };
     if (email) {
-      fetch(`  https://glacial-oasis-21847.herokuapp.com/user/${email}`, {
+      fetch(`http://localhost:5000/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json"
@@ -18,6 +18,7 @@ const useToken = (user) => {
         .then((res) => res.json())
         .then((data) => {
           const accessToken = data.token;
+          console.log(data);
           localStorage.setItem("accessToken", accessToken);
           setToken(accessToken);
         });

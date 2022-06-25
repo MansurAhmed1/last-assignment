@@ -22,12 +22,12 @@ const Dashboard = () => {
   return (
     <div className="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content text-left bg-slate-200 ">
+      <div className="drawer-content text-left  ">
         <Outlet></Outlet>
       </div>
-      <div className="drawer-side ">
+      <div className="drawer-side bg-slate-800  " style={{borderRight:"2px solid black"}}>
         <label for="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-60 bg-slate-50 text-base-content">
+        <ul className="menu p-4 overflow-y-auto w-60  ">
         <li>
             <CustomLink to="/dashboard">My Profle</CustomLink>
           </li>

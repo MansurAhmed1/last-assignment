@@ -29,7 +29,6 @@ const AddReview = () => {
 
 
   const onSubmit = async (data) => {
-     
     const image = data.image[0];
     const formData = new FormData();
     formData.append("image", image);
@@ -41,29 +40,26 @@ const AddReview = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-       
         if (result.success) {
           const img = result.data.url;
-       
+
           const review = {
             name: user?.displayName,
             email: user?.email,
-            review:data.review,
+            review: data.review,
             img: img
           };
-       
-          // send to your database
-         
 
-          const url = "  https://glacial-oasis-21847.herokuapp.com/reviews";
+          // send to your database
+
+          const url = "  http://localhost:5000/reviews";
           fetch(url, {
-           method: "POST",
-           headers: {
-             "content-type": "application/json",
-             authorization: `Bearer ${localStorage.getItem("accessToken")}`
-          
-           },
-           body: JSON.stringify(review)
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`
+            },
+            body: JSON.stringify(review)
           })
             .then((res) => res.json())
             .then((inserted) => {
@@ -77,8 +73,6 @@ const AddReview = () => {
         }
       });
   };
-
-  
 
   return (
     <div>
@@ -96,7 +90,7 @@ const AddReview = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="input input-bordered w-full "
+              className="input input-bordered w-full border border-black"
               value={user?.displayName}
               disabled
               {...register("name", {})}
@@ -116,7 +110,7 @@ const AddReview = () => {
               value={user?.email}
               disabled
               placeholder="Your Email"
-              className="input input-bordered w-full "
+              className="input input-bordered w-full border border-black "
               {...register("email", {})}
             />
             <label className="label">
@@ -136,7 +130,7 @@ const AddReview = () => {
           <div className="form-control w-full ">
             <textarea
               placeholder="Your Review"
-              className="textarea w-full "
+              className="textarea w-full border border-black "
               {...register("review", {
                 required: {
                   value: true,

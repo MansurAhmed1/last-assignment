@@ -5,15 +5,15 @@ import React from "react";
 const BusinessSummery = () => {
   return (
     <div className="my-36">
-      <h1 className="text-4xl text-teal-600  font-bold text-center">
-        MILIONS BUSINESS TRUST US
+      <h1 className="text-4xl   font-bold text-center">
+        Millions Business Trust Us
       </h1>
 
-      <h1 className="text-xl pt-2 font-bold text-center">
+      {/* <h1 className="text-xl pt-2 font-bold text-center">
         TRY TO UNDERSTAND USER EXPECTATION
-      </h1>
-      <div className="divider w-1/2 mx-auto"> </div>
-      <div className="stats py-8 flex  justify-between stats-vertical lg:stats-horizontal rounded-none shadow w-full">
+      </h1> */}
+      <div className="divider w-1/2  mx-auto"> </div>
+      <div className="stats py-8 flex  mx-auto w-11/12 justify-between stats-vertical lg:stats-horizontal rounded-none shadow ">
         <div className="stat">
           <div className="stat-figure text-primary">
             <img
@@ -24,7 +24,7 @@ const BusinessSummery = () => {
             />
           </div>
           <div className="stat-title ">Total Products</div>
-          <div className="stat-value text-primary">5M</div>
+          <div className="stat-value ">5M</div>
           <div className="stat-desc">40% more than last month</div>
         </div>
         <div className="stat">
@@ -36,7 +36,7 @@ const BusinessSummery = () => {
             />
           </div>
           <div className="stat-title">Total Order</div>
-          <div className="stat-value text-secondary">2.6 M</div>
+          <div className="stat-value text-primary">2.6 M</div>
           <div className="stat-desc">21% more than last month</div>
         </div>
 
@@ -49,7 +49,7 @@ const BusinessSummery = () => {
             />
           </div>
           <div className="stat-title">Served</div>
-          <div className="stat-value text-secondary">1M</div>
+          <div className="stat-value text-primary">1M</div>
           <div className="stat-desc">1M Served this month</div>
         </div>
 

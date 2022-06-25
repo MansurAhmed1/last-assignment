@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-      <div className="mt-10">
-        <footer className="footer p-10 bg-base-200 text-base-content">
+      <div className=" bg-slate-800">
+        <footer className="footer p-10   text-white">
           <div>
             <span className="footer-title">Services</span>
             <a className="link link-hover">Branding</a>
@@ -25,7 +25,7 @@ const Footer = () => {
             <a className="link link-hover">Cookie policy</a>
           </div>
         </footer>
-        <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+        <footer className="footer px-10 py-4 border-t  text-white border-base-300">
           <div className="items-center grid-flow-col">
             <svg
               width="24"

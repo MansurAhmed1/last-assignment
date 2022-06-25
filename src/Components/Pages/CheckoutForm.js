@@ -17,19 +17,17 @@ const CheckoutForm = ({ pay }) => {
 
   const [user] = useAuthState(auth);
 
+  ////////////eita stripe e r auto eitar maddhome stripe a  data send korano hoi.//////////
   useEffect(() => {
     if (productPrice) {
-      fetch(
-        " https://glacial-oasis-21847.herokuapp.com/create-payment-intent",
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`
-          },
-          body: JSON.stringify({ price: productPrice })
-        }
-      )
+      fetch(" http://localhost:5000/create-payment-intent", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        },
+        body: JSON.stringify({ price: productPrice })
+      })
         .then((res) => res.json())
         .then((data) => {
           if (data?.clientSecret) {
@@ -38,6 +36,8 @@ const CheckoutForm = ({ pay }) => {
         });
     }
   }, [productPrice]);
+
+  ////eita stripe e r auto eitar maddhome stripe a  data send korano hoi.////////////////
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -87,7 +87,7 @@ const CheckoutForm = ({ pay }) => {
         transactionId: paymentIntent.id
       };
       console.log(payment);
-      fetch(` https://glacial-oasis-21847.herokuapp.com/pay/${_id}`, {
+      fetch(` http://localhost:5000/pay/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
