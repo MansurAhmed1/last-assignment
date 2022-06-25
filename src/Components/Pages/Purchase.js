@@ -15,7 +15,7 @@ const Purchase = () => {
 
 
   useEffect(() => {
-    fetch(`  http://localhost:5000/service/${id}`)
+    fetch(` http://localhost:5000/service/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [order, id]);
@@ -51,7 +51,7 @@ const Purchase = () => {
       e.target.productQuantity.value >= order?.minimumquantity &&
       e.target.productQuantity.value <= order?.avaialbequantit
     ) {
-      const url = "  http://localhost:5000/order";
+      const url = " http://localhost:5000/order";
       fetch(url, {
         method: "POST",
         headers: {
@@ -68,6 +68,7 @@ const Purchase = () => {
             // setOrder(null);
           } else {
             toast("Failed to add Order");
+            console.log(inserted)
           }
         });
     } else {

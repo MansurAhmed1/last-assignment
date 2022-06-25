@@ -20,7 +20,7 @@ const CheckoutForm = ({ pay }) => {
   ////////////eita stripe e r auto eitar maddhome stripe a  data send korano hoi.//////////
   useEffect(() => {
     if (productPrice) {
-      fetch(" http://localhost:5000/create-payment-intent", {
+      fetch("http://localhost:5000/create-payment-intent", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -87,7 +87,7 @@ const CheckoutForm = ({ pay }) => {
         transactionId: paymentIntent.id
       };
       console.log(payment);
-      fetch(` http://localhost:5000/pay/${_id}`, {
+      fetch(`http://localhost:5000/pay/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

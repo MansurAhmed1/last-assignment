@@ -21,13 +21,18 @@ const Profile = ({ profile, setToggle, toggle }) => {
       <div className="flex justify-center pt-12 py-6 lg:py-16  items-center">
         <img
           className="-mt-6"
-          style={{ width: "250px", height: "250px",borderRadius:"50%",border:"1px solid gray" }}
+          style={{
+            width: "250px",
+            height: "250px",
+            borderRadius: "50%",
+            border: "1px solid gray"
+          }}
           src={image}
           alt=""
         />
       </div>
 
-      <div className="font-semibold  pb-12 px-4 lg:px-0 py-6 lg:py-12 text-black text-lg">
+      <div className="font-semibold  pb-11 px-4 lg:px-0 py-6 lg:py-12 text-black text-lg">
         <p className="py-1">{name}</p>
 
         <p className="py-1">{email}</p>

@@ -12,7 +12,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const procced = window.confirm("Are You sure Want to delete this book?");
     if (procced) {
-      const url = `  http://localhost:5000/delete/${id}`;
+      const url = ` http://localhost:5000/delete/${id}`;
       fetch(url, {
         method: "DELETE"
       })
@@ -25,7 +25,7 @@ const MyOrders = () => {
     const email = user?.email;
 
     if (email) {
-      fetch(` http://localhost:5000/order?email=${email}`)
+      fetch(`http://localhost:5000/order?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);

@@ -8,13 +8,16 @@ const useToken = (user) => {
     const email = user?.user?.email;
     const currentUser = { email: email };
     if (email) {
-      fetch(`http://localhost:5000/user/${email}`, {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json"
-        },
-        body: JSON.stringify(currentUser)
-      })
+      fetch(
+        `https:http://localhost:5000/olate-spire-71703.herokuapp.com/user/${email}`,
+        {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json"
+          },
+          body: JSON.stringify(currentUser)
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           const accessToken = data.token;

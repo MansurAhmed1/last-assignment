@@ -15,8 +15,11 @@ code {
     monospace;
 }
 
-a,.signOutButton{
-  font-family: 'Roboto Condensed', sans-serif;
-color: white;
+a{
+  font-family: 'Roboto', sans-serif;
 font-size: 16px;
 }  
+.signOutButton{
+  font-size: 14px;
+  font-weight: 700;
+}
