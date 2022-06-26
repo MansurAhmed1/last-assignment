@@ -3,7 +3,7 @@ import React from 'react';
 const NotFoundPage = () => {
     return (
         <div className='flex justify-center items-center' style={{height:"80vh"}}>
-            Page Note Pound
+            <img className='w-4/6 h-4/6' src="https://img.freepik.com/free-vector/internet-connection-problem-concept-illustration-404-found-error-page-cat-sits-laptop_450656-182.jpg?w=2000" alt="" />
         </div>
     );
 };

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../firebase.init";
 
@@ -15,7 +15,7 @@ const Purchase = () => {
 
 
   useEffect(() => {
-    fetch(` http://localhost:5000/service/${id}`)
+    fetch(`http://localhost:5000/service/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [order, id]);
@@ -51,7 +51,7 @@ const Purchase = () => {
       e.target.productQuantity.value >= order?.minimumquantity &&
       e.target.productQuantity.value <= order?.avaialbequantit
     ) {
-      const url = " http://localhost:5000/order";
+      const url = "http://localhost:5000/order";
       fetch(url, {
         method: "POST",
         headers: {
@@ -68,7 +68,7 @@ const Purchase = () => {
             // setOrder(null);
           } else {
             toast("Failed to add Order");
-            console.log(inserted)
+            console.log(inserted);
           }
         });
     } else {
@@ -110,7 +110,7 @@ const Purchase = () => {
         </div>
         <div>
           <div className="flex flex-col justify-center my-4 items-center">
-            <ToastContainer></ToastContainer>
+    
 
             <form
               onSubmit={handleOnSubmit}
@@ -216,7 +216,7 @@ const Purchase = () => {
               </div>
               <input
                 disabled={disable}
-                className="btn w-full btn-primary  hover:bg-stone-700 text-white"
+                className="btn w-full btn-primary bg-stone-700  hover:bg-stone-700 text-white"
                 type="submit"
                 value="CONFORM ORDER"
               />

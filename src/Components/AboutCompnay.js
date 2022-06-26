@@ -52,13 +52,13 @@ const AboutCompnay = () => {
   ];
   return (
     <div className="shadow-lg mb-24 pb-6 my-36">
-      <h1 className=" mt-24 text-4xl pb-16 font-bold text-center text-black">
+      <h1 className=" mt-24 lg:text-4xl text-3xl lg:pb-16 pb-8 font-bold text-center text-black">
         About Our Company
       </h1>
 
       <div className="grid w-11/12 mx-auto   grid-cols-1 md:grid-cols-2 ">
         <div className=" text-justify ">
-          <h1 className="text-2xl text-black">
+          <h1 className="text-2xl  text-black">
             We are leading company in this field, We provide specific solutions
             for our every customers.
           </h1>
@@ -73,14 +73,14 @@ const AboutCompnay = () => {
             We partner with over 320 amazing ut projects worldwide, and have
             given over $150 million in cash and product grants to other groups.
           </div>
-          <div className="pt-4">
-            <button className="btn  text-black rounded-none hover:bg-white bg-primary">
+          <div className="pt-4 flex justify-center">
+            <button className="btn px-16 lg:px-1  text-black rounded-none hover:bg-white bg-primary">
               More About Us
             </button>
           </div>
         </div>
-        <div className="pl-3 flex justify-center items-center">
-          <BarChart className="ml-5" width={450} height={350} data={data}>
+        <div className="lg:pl-3 pt-5 flex justify-center items-center">
+          <BarChart className="lg:ml-5" width={350} height={350} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="month" />
             {/* <YAxis /> */}

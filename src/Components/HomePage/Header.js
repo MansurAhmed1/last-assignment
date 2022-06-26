@@ -147,7 +147,7 @@ const Header = () => {
   console.log(navTrigger)
   // pb-4
   return (
-    <header className=' py-6 bg-slate-800  sticky top-0 z-40 '>
+    <header className=' py-6 bg-slate-800  sticky top-0 z-30 '>
     <nav className=' w-11/12 mx-auto relative lg:px-1 px-5 '>
         <div className='flex justify-between items-center'>
             <div className='navLeft '>

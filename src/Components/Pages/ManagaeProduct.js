@@ -13,7 +13,7 @@ const ManagaeProduct = () => {
   const handleDelete = (id) => {
     const procced = window.confirm("Are You sure Want to delete this book?");
     if (procced) {
-      const url = ` http://localhost:5000/deleteproduct/${id}`;
+      const url = `http://localhost:5000/deleteproduct/${id}`;
       fetch(url, {
         method: "DELETE"
       })
@@ -26,21 +26,19 @@ const ManagaeProduct = () => {
   };
 
   useEffect(() => {
-    //   fetch(` http://localhost:5000/order?email=${email}`, {
+    //   fetch(`http://localhost:5000/order?email=${email}`, {
     //     method: "GET",
     //     // headers: {
     //     //   "content-type": "application/json",
     //     //   authorization: `Bearer ${localStorage.getItem("accessToken")}`
     //     // }
     //   })
-    fetch(" http://localhost:5000/service")
+    fetch("http://localhost:5000/service")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
       });
   }, [user, products]);
-
- 
 
   return (
     <div>
@@ -79,7 +77,7 @@ const ManagaeProduct = () => {
                       onClick={() => {
                         handleDelete(product._id);
                       }}
-                      class="btn btn-sm"
+                      class="btn btn-sm bg-orange-500 hover:bg-orange-500 rounded-none text-black"
                     >
                       delete
                     </button>

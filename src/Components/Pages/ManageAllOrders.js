@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
       shipped: true,
       pending: false
     };
-    const url = ` http://localhost:5000/order/update/${id}`;
+    const url = `http://localhost:5000/order/update/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -28,16 +28,15 @@ const ManageAllOrders = () => {
   };
 
   useEffect(() => {
-    fetch(" http://localhost:5000/orders")
+    fetch("http://localhost:5000/orders")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
       });
   }, [user, orders]);
 
-
   return (
-    <div>
+    <div className="mb-44 ">
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -62,7 +61,7 @@ const ManageAllOrders = () => {
                   <th>{order.productQuantity}</th>
                   <td>
                     {order.pending && (
-                      <span className="text-sm font-semibold">
+                      <span className="text-sm font-semibold bg-orange-500 hover:bg-orange-500 text-black rounded-none">
                         Painding......
                       </span>
                     )}
@@ -83,16 +82,20 @@ const ManageAllOrders = () => {
                   </td>
                   <td>
                     {order?.shipped && (
-                      <button className="btn btn-sm">Shipped</button>
+                      <button className="btn btn-sm bg-green-500 hover:bg-green-500 text-black rounded-none">
+                        Shipped
+                      </button>
                     )}
                   </td>
 
                   <td>
                     {order.paid ? (
-                      <button className="btn btn-sm">paid</button>
+                      <button className="btn btn-sm bg-black hover:bg-black rounded-none text-white">
+                        paid
+                      </button>
                     ) : (
                       <span className="text-sm font-semibold">
-                        <button className="btn btn-active btn-ghost btn-sm">
+                        <button className="btn  bg-orange-500 btn-sm rounded-none text-black">
                           unpaid
                         </button>
                       </span>

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../firebase.init";
@@ -49,7 +49,7 @@ const onSubmit = async (data) => {
           name: user?.displayName
         };
 
-        const url = " http://localhost:5000/profile";
+        const url = "http://localhost:5000/profile";
         fetch(url, {
           method: "POST",
           headers: {
@@ -74,7 +74,7 @@ const onSubmit = async (data) => {
 const [profileData, setProfileData] = useState([]);
 useEffect(() => {
   const email = user?.email;
-  fetch(` http://localhost:5000/profile?email=${email}`)
+  fetch(`http://localhost:5000/profile?email=${email}`)
     .then((res) => res.json())
     .then((data) => setProfileData(data));
 }, [user, profileData, profileData.length]);
@@ -83,7 +83,7 @@ return (
   <div className="">
     {profileData.length < 1 ? (
       <div className="mb-14">
-        <ToastContainer></ToastContainer>
+       
         <h2 className="text-2xl text-center font-semibold pt-6">
           Add Your Profile
         </h2>

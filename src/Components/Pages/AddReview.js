@@ -4,7 +4,7 @@
 import React from "react";
 import {useAuthState} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast, ToastContainer} from "react-toastify";
+import { toast} from "react-toastify";
 
 import 'react-toastify/dist/ReactToastify.css';
 import auth from "../firebase.init";
@@ -52,7 +52,7 @@ const AddReview = () => {
 
           // send to your database
 
-          const url = " http://localhost:5000/reviews";
+          const url = "http://localhost:5000/reviews";
           fetch(url, {
             method: "POST",
             headers: {
@@ -76,7 +76,7 @@ const AddReview = () => {
 
   return (
     <div>
-      <ToastContainer></ToastContainer>
+
       <h2 className="text-2xl text-center font-semibold py-6">
         Add Your Review
       </h2>

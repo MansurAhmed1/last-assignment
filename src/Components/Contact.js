@@ -6,9 +6,10 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div style={{border:"4px solid black"}} className="  px-10 py-14 my-15  w-11/12 mx-auto">
-      <div className="text-center pb-14 text-white">
-        <h1 className="text-4xl text-black font-bold">Stay connected with us</h1>
+    <div style={{border:"1px solid black",borderRadius:"10px"}} className="  px-2 py-14 my-15 mb-10 w-11/12 lg:w-11/12 mx-auto lg:grid grid-cols-2 ">
+     <div>
+     <div className="text-center pb-14 text-white">
+        <h1 className="lg:text-4xl text-3xl text-black font-bold">Stay connected with us</h1>
       </div>
       <div className="grid   grid-cols-1 justify-items-center gap-5">
         <input
@@ -28,10 +29,14 @@ const Contact = () => {
         ></textarea>
         <input
           type="submit"
-          className="btn w-2/5 border   border-black hover:bg-white px-10  btn-primary"
+          className="btn lg:w-4/5 border w-full  border-black hover:bg-white px-10  btn-primary"
           value="Submit"
         />
       </div>
+     </div>
+     <div className="flex justify-center items-center">
+      <img className="w-4/5 hidden lg:block h-4/5" src="https://keyword-hero.com/wp-content/uploads/2017/04/contact-the-hero-1024x744.png" alt="" />
+     </div>
     </div>
   );
 };

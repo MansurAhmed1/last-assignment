@@ -4,8 +4,8 @@ import React from "react";
 // text-teal-300 
 const BusinessSummery = () => {
   return (
-    <div className="my-36">
-      <h1 className="text-4xl   font-bold text-center">
+    <div className="lg:my-36 ">
+      <h1 className="lg:text-4xl text-3xl  w-11/12 mx-auto  font-bold text-center">
         Millions Business Trust Us
       </h1>
 

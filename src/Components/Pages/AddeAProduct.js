@@ -4,7 +4,7 @@
 import React from "react";
 import {useAuthState} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast, ToastContainer} from "react-toastify";
+import { toast} from "react-toastify";
 
 import 'react-toastify/dist/ReactToastify.css';
 import auth from "../firebase.init";
@@ -29,7 +29,6 @@ const AddeAProduct = () => {
 
 
   const onSubmit = async (data) => {
-     
     const image = data.image[0];
     const formData = new FormData();
     formData.append("image", image);
@@ -41,35 +40,29 @@ const AddeAProduct = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        
         if (result.success) {
           const img = result.data.url;
-         
+
           const addProduct = {
             name: data.ProductName,
             email: user?.email,
-            price:data.price,
+            price: data.price,
             image: img,
-            avaialbequantit:data.quantity,
-            minimumquantity:data.minimumQuantity,
-            description:data.description
-
-
-
+            avaialbequantit: data.quantity,
+            minimumquantity: data.minimumQuantity,
+            description: data.description
           };
-        
-          // send to your database
-         
 
-          const url = " http://localhost:5000/added";
+          // send to your database
+
+          const url = "http://localhost:5000/added";
           fetch(url, {
-           method: "POST",
-           headers: {
-             "content-type": "application/json",
-             authorization: `Bearer ${localStorage.getItem("accessToken")}`
-          
-           },
-           body: JSON.stringify(addProduct)
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`
+            },
+            body: JSON.stringify(addProduct)
           })
             .then((res) => res.json())
             .then((inserted) => {
@@ -84,11 +77,9 @@ const AddeAProduct = () => {
       });
   };
 
-  
-
   return (
-    <div className="mb-14">
-      <ToastContainer></ToastContainer>
+    <div className="mb-44">
+     
       <h2 className="text-2xl text-center font-semibold pt-6">
         Added Your Product
       </h2>

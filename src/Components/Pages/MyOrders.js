@@ -12,7 +12,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const procced = window.confirm("Are You sure Want to delete this book?");
     if (procced) {
-      const url = ` http://localhost:5000/delete/${id}`;
+      const url = `http://localhost:5000/delete/${id}`;
       fetch(url, {
         method: "DELETE"
       })
@@ -62,7 +62,7 @@ const MyOrders = () => {
                       onClick={() => {
                         handleDelete(order._id);
                       }}
-                      class="btn btn-sm btn-accent"
+                      class="btn btn-accent btn-sm bg-orange-600 hover:bg-orange-600 rounded-none text-black  "
                     >
                       delete
                     </button>
@@ -70,13 +70,15 @@ const MyOrders = () => {
 
                   <td>
                     {order.paid ? (
-                      <button className="btn btn-sm">paid</button>
+                      <button className="btn btn-sm rounded-none bg-black text-white">
+                        paid
+                      </button>
                     ) : (
                       <Link
-                        className="btn btn-sm btn-primary"
+                        className="btn  rounded-none btn-sm  bg-green-400 hover:bg-green-400 text-black "
                         to={`/payment/${order?._id}`}
                       >
-                        <button >pay</button>
+                        <button className="">PAY</button>
                       </Link>
                     )}
                   </td>

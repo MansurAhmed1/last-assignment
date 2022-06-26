@@ -14,7 +14,7 @@ const ProductCard = ({ service }) => {
     minimumquantity
   } = service;
   return (
-    <div class="card   border-red-50 border bg-white drop-shadow-xl rounded-none">
+    <div class="card relative  border-red-50 border bg-white drop-shadow-xl rounded-none">
       <figure class="px-10 pt-10 pb-2 flex justify-center items center">
         <img
           src={image}
@@ -34,8 +34,8 @@ const ProductCard = ({ service }) => {
           {description.slice(0, 30)}
           <span title={description.slice(31, 40)}>...</span>
         </p>
-        <div className="card-actions mt-3 ">
-          <Link className="btn hover:bg-black hover:text-white  btn-block rounded-none px-11 btn-primary" to={`purchase/${_id}`}>
+        <div className="card-actions mt-12 ">
+          <Link className="btn hover:bg-black absolute left-0 bottom-0 hover:text-white  btn-block rounded-none px-11 btn-primary" to={`purchase/${_id}`}>
             <button className="">PURCHASE</button>
           </Link>
         </div>

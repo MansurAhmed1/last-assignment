@@ -1,13 +1,14 @@
 /** @format */
 
 import React from "react";
+import './Banner.css'
 
 
 const Banner = () => {
   return (
-   <div className="grid lg:grid-cols-2 grid-cols-1 w-11/12 mx-auto py-5">
-    <div className="px-5">
-      <h1 className="text-4xl text-black font-bold mt-12">
+   <div className="lg:grid flex  flex-col-reverse lg:grid-cols-2 grid-cols-1 w-11/12 mx-auto py-5">
+    <div className="px-5 lg:text-left text-center">
+      <h1 className="text-4xl text-black font-bold mt-8 lg:mt-12">
         Your next tree
       </h1>
       <h1 className="text-4xl text-primary font-bold mt-1">
@@ -16,7 +17,7 @@ const Banner = () => {
       <p className="py-4 text-justify text-black ">
         Aloe vera is a succulent plant with popular medicinal properties. The gel from aloe leaves can aid in the healing of minor burns and inflammation through topical application. It also promotes skin hydration and soothes irritation. Drinking aloe vera juice or water with aloe added to it provides many benefits, too. Juice from this plant can be used as a health supplement to help with a variety of issues, or adding some aloe to your water can simply be a way to help you stay hydrated. Many people include aloe vera juice in their daily diet to boost their overall health.
       </p>
-      <button className="btn bg-primary text-black px-6 rounded-none  hover:bg-white hover:text-green-600  hover:border-green-600">
+      <button className="btn bg-primary text-black lg:px-6 px-16 rounded-none  hover:bg-white hover:text-black  hover:border-black">
         See Products
 
 
@@ -24,8 +25,8 @@ const Banner = () => {
 
 
     </div>
-    <div className="flex justify-center items-end ">
-      <img className=" ml-5 " style={{height:"350px",width:"500px"}} src="https://www.treehugger.com/thmb/JSTt1tufZDnt10foyfqLInLgyKQ=/1000x668/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__treehugger__images__2016__12__monday-motorbikes-m1-c5e6c59d20854aa2926408ea9ddedc52.jpg" alt="" />
+    <div className="flex justify-center lg:items-end  items-center">
+      <img className=" lg:ml-5 bannerImage"  src="https://www.treehugger.com/thmb/JSTt1tufZDnt10foyfqLInLgyKQ=/1000x668/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__treehugger__images__2016__12__monday-motorbikes-m1-c5e6c59d20854aa2926408ea9ddedc52.jpg" alt="" />
 
     </div>
 
