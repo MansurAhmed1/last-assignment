@@ -147,7 +147,7 @@ const Header = () => {
   console.log(navTrigger)
   // pb-4
   return (
-    <header className=' py-6 bg-slate-800  sticky top-0 z-30 '>
+    <header style={{borderBottom:"1px solid black"}} className=' py-6 bg-white  sticky top-0 z-30 '>
     <nav className=' w-11/12 mx-auto relative lg:px-1 px-5 '>
         <div className='flex justify-between items-center'>
             <div className='navLeft '>
@@ -187,7 +187,7 @@ const Header = () => {
                </div>
             </div>
         </div >
-        <div  className={`smallMenu block z-40 lg:hidden pb-5  bg-slate-800 w-full absolute left-0 top-16 ${navTrigger?'block':'hidden'}  `} >
+        <div  className={`smallMenu block z-40 lg:hidden pb-5  bg-white w-full absolute left-0 top-16 ${navTrigger?'block':'hidden'}  `} >
             <div className='grid grid-cols-1 gap-y-6 text-center'>
             <CustomLink className='mx-2 px-2 py-2 text-lg headerAnchor ' to={"/"}>Home</CustomLink>
                <CustomLink className='mx-2 px-2 py-2 text-lg headerAnchor ' to={"/portfolio"}>Portfolio</CustomLink>

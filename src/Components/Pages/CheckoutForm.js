@@ -20,14 +20,17 @@ const CheckoutForm = ({ pay }) => {
   ////////////eita stripe e r auto eitar maddhome stripe a  data send korano hoi.//////////
   useEffect(() => {
     if (productPrice) {
-      fetch("http://localhost:5000/create-payment-intent", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`
-        },
-        body: JSON.stringify({ price: productPrice })
-      })
+      fetch(
+        "https://secret-journey-33210.herokuapp.com/create-payment-intent",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`
+          },
+          body: JSON.stringify({ price: productPrice })
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data?.clientSecret) {
@@ -87,7 +90,7 @@ const CheckoutForm = ({ pay }) => {
         transactionId: paymentIntent.id
       };
       console.log(payment);
-      fetch(`http://localhost:5000/pay/${_id}`, {
+      fetch(`https://secret-journey-33210.herokuapp.com/pay/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

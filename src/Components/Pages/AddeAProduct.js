@@ -55,7 +55,7 @@ const AddeAProduct = () => {
 
           // send to your database
 
-          const url = "http://localhost:5000/added";
+          const url = "https://secret-journey-33210.herokuapp.com/added";
           fetch(url, {
             method: "POST",
             headers: {
@@ -265,7 +265,7 @@ const AddeAProduct = () => {
           </div>
 
           <input
-            className="btn w-full btn-primary  hover:bg-stone-700 text-white"
+            className="btn w-full   hover:bg-stone-700 text-white"
             type="submit"
             value="conform order"
           />

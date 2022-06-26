@@ -6,7 +6,7 @@ const Profile = ({ profile, setToggle, toggle }) => {
   const { name, email, image, address, education, linkdin, _id } = profile;
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/deleteprofile/${id}`;
+    const url = `https://secret-journey-33210.herokuapp.com/deleteprofile/${id}`;
     fetch(url, {
       method: "DELETE"
     })
@@ -17,10 +17,10 @@ const Profile = ({ profile, setToggle, toggle }) => {
   };
 
   return (
-    <div className=" grid gird-cols-1  justify-center items-center lg:grid-cols-2  shadow mt-0  mx-5">
+    <div className=" grid gird-cols-1  justify-center items-center lg:grid-cols-2   mt-0  mx-5">
       <div className="flex justify-center pt-12 py-6 lg:py-16  items-center">
         <img
-          className="-mt-6"
+          className="-mt-14"
           style={{
             width: "250px",
             height: "250px",
@@ -38,7 +38,7 @@ const Profile = ({ profile, setToggle, toggle }) => {
         <p className="py-1">{email}</p>
         <p className="py-1">{education}</p>
         <p className="py-1">{address}</p>
-        <p className="py-1">{linkdin}</p>
+        <p className="py-1"> <a href={linkdin}>{linkdin}</a> </p>
         <div className="flex justify-end  mt-24">
           <button
             onClick={() => {

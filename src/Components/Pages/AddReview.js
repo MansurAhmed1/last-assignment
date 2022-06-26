@@ -52,7 +52,7 @@ const AddReview = () => {
 
           // send to your database
 
-          const url = "http://localhost:5000/reviews";
+          const url = "https://secret-journey-33210.herokuapp.com/reviews";
           fetch(url, {
             method: "POST",
             headers: {

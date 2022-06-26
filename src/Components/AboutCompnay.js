@@ -73,7 +73,7 @@ const AboutCompnay = () => {
             We partner with over 320 amazing ut projects worldwide, and have
             given over $150 million in cash and product grants to other groups.
           </div>
-          <div className="pt-4 flex justify-center">
+          <div className="pt-4 flex justify-center lg:justify-start">
             <button className="btn px-16 lg:px-1  text-black rounded-none hover:bg-white bg-primary">
               More About Us
             </button>

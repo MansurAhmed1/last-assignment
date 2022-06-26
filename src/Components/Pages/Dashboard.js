@@ -25,37 +25,37 @@ const Dashboard = () => {
       <div className="drawer-content text-left  ">
         <Outlet></Outlet>
       </div>
-      <div className="drawer-side bg-slate-800  " style={{borderRight:"2px solid black"}}>
+      <div className="drawer-side   " style={{borderRight:"1px solid black"}}>
         <label for="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-60  ">
         <li>
-            <CustomLink to="/dashboard">My Profle</CustomLink>
+            <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard">My Profle</CustomLink>
           </li>
          {
            !admin && <> <li>
-           <CustomLink to="/dashboard/addreview">Add Review</CustomLink>
+           <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard/addreview">Add Review</CustomLink>
          </li></>
          }
          
         
           
           <li>
-            <CustomLink to="/dashboard/myorder">My Order</CustomLink>
+            <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard/myorder">My Order</CustomLink>
           </li>
        
           {admin && (
             <>
               <li>
-                <CustomLink to="/dashboard/addproduct">Add Product</CustomLink>
+                <CustomLink className=' px-2 py-1  text-black  headerAnchor ' to="/dashboard/addproduct">Add Product</CustomLink>
               </li>
               <li>
-                <CustomLink to="/dashboard/manageorder">Manage Order</CustomLink>
+                <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard/manageorder">Manage Order</CustomLink>
               </li>
               <li>
-                <CustomLink to="/dashboard/manageproduct">Manage Product</CustomLink>
+                <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard/manageproduct">Manage Product</CustomLink>
               </li>
               <li>
-                <CustomLink to="/dashboard/makeadmin">Make Admin</CustomLink>
+                <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard/makeadmin">Make Admin</CustomLink>
               </li>
               
             </>

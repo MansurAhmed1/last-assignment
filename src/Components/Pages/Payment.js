@@ -17,7 +17,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
-  const url = `http://localhost:5000/pay/${id}`;
+  const url = `https://secret-journey-33210.herokuapp.com/pay/${id}`;
 
   const { data: pay, isLoading } = useQuery(["pay", id], () =>
     fetch(url, {
