@@ -35,7 +35,7 @@ const ProductCard = ({ service }) => {
           <span title={description.slice(31, 40)}>...</span>
         </p>
         <div className="card-actions mt-12 ">
-          <Link className="btn hover:bg-black absolute left-0 bottom-0 hover:text-white  btn-block rounded-none px-11 btn-primary" to={`purchase/${_id}`}>
+          <Link className="btn hover:bg-black absolute left-0 bottom-0 hover:text-white  btn-block rounded-none px-11 btn-primary" to={`purchase/${_id}`}>  
             <button className="">PURCHASE</button>
           </Link>
         </div>

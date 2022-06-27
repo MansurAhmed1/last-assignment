@@ -61,8 +61,8 @@ const ManageAllOrders = () => {
                   <th>{order.productQuantity}</th>
                   <td>
                     {order.pending && (
-                      <span className="text-sm font-semibold bg-orange-500 hover:bg-orange-500 text-black rounded-none">
-                        Painding......
+                      <span className="text-sm font-semibold painding  rounded-none">
+                        PAINDING......
                       </span>
                     )}
                   </td>
