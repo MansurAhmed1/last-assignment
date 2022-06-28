@@ -235,7 +235,7 @@ return (
       </div>
     ) : (
       <div>
-        <h2 className="text-2xl text-center font-semibold pt-6">My Profile</h2>
+        <h2 className="text-2xl text-center pb-10 lg:pb-0 font-semibold pt-6">My Profile</h2>
         {profileData.map((profile, index) => (
           <Profile
             key={index}

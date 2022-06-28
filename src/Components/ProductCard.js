@@ -14,7 +14,7 @@ const ProductCard = ({ service }) => {
     minimumquantity
   } = service;
   return (
-    <div class="card relative  border-red-50 border bg-white drop-shadow-xl rounded-none">
+    <div class="card relative  border-gray-200 border bg-white drop-shadow-xl rounded-none">
       <figure class="px-10 pt-10 pb-2 flex justify-center items center">
         <img
           src={image}

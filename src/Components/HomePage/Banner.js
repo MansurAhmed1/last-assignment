@@ -6,16 +6,16 @@ import './Banner.css'
 
 const Banner = () => {
   return (
-   <div className="lg:grid flex  flex-col-reverse lg:grid-cols-2 grid-cols-1 w-11/12 mx-auto py-5">
-    <div className="px-5 lg:text-left text-center">
+   <div className="lg:grid  flex  flex-col-reverse lg:grid-cols-2 grid-cols-1 w-11/12 mx-auto py-5">
+    <div className="px-5 bannermain ">
       <h1 className="text-4xl text-black font-bold mt-8 lg:mt-12">
-        Your next tree
+        Your next manufacture
       </h1>
       <h1 className="text-4xl text-primary font-bold mt-1">
-        Your next future
+        Your safe future
       </h1>
       <p className="py-4 text-justify text-black ">
-        Aloe vera is a succulent plant with popular medicinal properties. The gel from aloe leaves can aid in the healing of minor burns and inflammation through topical application. It also promotes skin hydration and soothes irritation. Drinking aloe vera juice or water with aloe added to it provides many benefits, too. Juice from this plant can be used as a health supplement to help with a variety of issues, or adding some aloe to your water can simply be a way to help you stay hydrated. Many people include aloe vera juice in their daily diet to boost their overall health.
+        Aloe vera is a succulent plant with popular medicinal properties. The gel from aloe leaves can aid in the healing of minor burns and inflammation throwgh topical application. It also promotes skin hydration and soothes irritation. Drinking aloe vera juice or water with aloe added to it provides many benefits, too. Juice from this plant can be used as a health supplement to help with a variety of issues, or adding some aloe to your water can simply be a way to help you stay hydrated. Many people include aloe vera juice in their daily diet to boost their overall health.
       </p>
       <button className="btn bg-primary text-black lg:px-6 px-16 rounded-none  hover:bg-white hover:text-black  hover:border-black">
         See Products

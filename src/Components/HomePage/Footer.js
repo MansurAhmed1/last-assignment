@@ -6,23 +6,23 @@ const Footer = () => {
         <footer className="footer p-10   text-white">
           <div>
             <span className="footer-title">Services</span>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <a  href="#kkk" className="link link-hover">Branding</a>
+            <a  href="#kkk"className="link link-hover">Design</a>
+            <a  href="#kkk"className="link link-hover">Marketing</a>
+            <a  href="#kkk"className="link link-hover">Advertisement</a>
           </div>
           <div>
             <span className="footer-title">Company</span>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <a  href="#kkk"className="link link-hover">About us</a>
+            <a  href="#kkk"className="link link-hover">Contact</a>
+            <a  href="#kkk"className="link link-hover">Jobs</a>
+            <a  href="#kkk"className="link link-hover">Press kit</a>
           </div>
           <div>
             <span className="footer-title">Legal</span>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
+            <a  href="#kkk"className="link link-hover">Terms of use</a>
+            <a  href="#kkk"className="link link-hover">Privacy policy</a>
+            <a  href="#kkk"className="link link-hover">Cookie policy</a>
           </div>
         </footer>
         <footer className="footer px-10 py-4 border-t  text-white border-base-300">
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
-              <a>
+              <a  href="#kkk">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
