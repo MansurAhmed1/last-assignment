@@ -12,7 +12,7 @@
 
 //   return (
 //     <div className="my-10 mb-36">
-//       <h1 className="lg:text-4xl text-3xl font-bold py-12 text-center">
+//       <h1 className="lg:text-4xl text-2xl font-bold py-12 text-center">
 //         What Our Customer Say
 //       </h1>
 //       <div className="grid grid-cols-1  gap-7 md:grid-cols-2 w-11/12 mx-auto">
@@ -103,8 +103,8 @@ const Review = () => {
   
       className=" my-10 mb-36"
     >
-      <div style={{ width: "90%" }} className="mx-auto  ">
-            <h1 className="lg:text-4xl text-3xl font-bold py-12 text-center">
+      <div   className="mx-auto  lg:w-11/12 w-full">
+            <h1 className="lg:text-4xl text-2xl  font-bold py-12 text-center">
       What Our Customer Say
      </h1>
         <div className="">
@@ -113,20 +113,20 @@ const Review = () => {
         {reviews.map((review) => (
           
           <div
-          className=" rounded  shadow-lg border m-0  p-2"
-          style={{ height: "200px",width:"460px" }}
+          className=" rounded reviewcard shadow-lg border m-0  p-2"
+        
         >
           <div className="flex  justify-between items-center">
             <div className="flex items-center justify-start">
               <div class="avatar">
-                <div class="w-16 border rounded-full">
+                <div class="w-16 h-16 border rounded-full">
                   <img src={review.img} alt="" />
                 </div>
               </div>
               <p className="ml-3 font-semibold">{review.name}</p>
             </div>
 
-            <div class="rating">
+            <div class="rating hidden lg:block">
               <input
                 type="radio"
                 name="rating-2"
@@ -154,7 +154,7 @@ const Review = () => {
               />
             </div>
           </div>
-          <div className="py-4 text-left">{review.review}</div>
+          <div className="py-4 text-justify">{review.review}</div>
         </div>
        
         ))}

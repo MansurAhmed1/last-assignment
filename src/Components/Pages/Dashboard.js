@@ -25,9 +25,9 @@ const Dashboard = () => {
       <div className="drawer-content text-left  ">
         <Outlet></Outlet>
       </div>
-      <div className="drawer-side   " style={{borderRight:"1px solid black"}}>
+      <div className="drawer-side  " style={{borderRight:"1px solid black"}}>
         <label for="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-60  ">
+        <ul className="menu bg-white p-4 overflow-y-auto w-60  ">
         <li>
             <CustomLink  className=' px-2 py-1  text-black  headerAnchor '  to="/dashboard">My Profle</CustomLink>
           </li>

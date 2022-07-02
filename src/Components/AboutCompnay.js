@@ -52,43 +52,50 @@ const AboutCompnay = () => {
   ];
   return (
     <div className="shadow-lg mb-24 pb-6 my-36">
-      <h1 className=" mt-24 lg:text-4xl text-3xl lg:pb-16 pb-8 font-bold text-center text-black">
+      <h1 className=" mt-24 lg:text-4xl text-2xl lg:pb-16 pb-8 font-bold text-center text-black">
         About Our Company
       </h1>
 
-      <div className="grid w-11/12 mx-auto   grid-cols-1 md:grid-cols-2 ">
+      <div className="grid w-11/12 mx-auto  grid-cols-1  md:grid-cols-2 ">
         <div className=" text-justify ">
-          <h1 className="text-2xl  text-black">
+          <h1 className="lg:text-2xl font-bold  lg:font-normal px-5 lg:px-0  text-black">
             We are leading company in this field, We provide specific solutions
             for our every customers.
           </h1>
-          <div className="py-4">
+          <div className="py-4 px-5 lg:px-0">
             When you give to Our Charity, know your donation is making a
             difference Whether you are supporting one our Signature Programs or
             our carefully curated list of Gifts That Give More, our professional
             staff. Manufactory partner with over 320 amazing projects worldwide,
             and have given over $150 million product.
           </div>
-          <div>
+          <div className="px-5 lg:px-0">
             We partner with over 320 amazing ut projects worldwide, and have
             given over $150 million in cash and product grants to other groups.
           </div>
-          <div className="pt-4 flex justify-center lg:justify-start">
-            <button className="btn px-16 lg:px-1  text-black rounded-none hover:bg-white bg-primary">
+          <div className="pt-4 hidden lg:flex justify-center lg:justify-start">
+            <button className="btn bg-primary  text-black lg:px-6 px-16 rounded-none  hover:bg-white hover:text-black  hover:border-black">
               More About Us
             </button>
           </div>
         </div>
-        <div className="lg:pl-3 pt-5 flex justify-center items-center">
-          <BarChart className="lg:ml-5" width={350} height={350} data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            {/* <YAxis /> */}
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="investment" fill="black" />
-            <Bar dataKey="sell" fill="#0ec2dd" />
-          </BarChart>
+        <div>
+          <div className="lg:pl-3   overflow-x-scroll  w-11/12  mx-auto  pt-5 flex flex-col justify-center items-center">
+            <BarChart className="lg:ml-5 " width={450} height={350} data={data}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="month" />
+              {/* <YAxis /> */}
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="investment" fill="black" />
+              <Bar dataKey="sell" fill="#0ec2dd" />
+            </BarChart>
+          </div>
+          <div className="pt-4 flex lg:hidden justify-center lg:justify-start">
+            <button className="btn bg-primary  text-black lg:px-6 px-16 rounded-none  hover:bg-white hover:text-black  hover:border-black">
+              More About Us
+            </button>
+          </div>
         </div>
       </div>
     </div>

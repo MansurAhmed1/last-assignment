@@ -10,3 +10,14 @@ button.rec-dot{
   button.rec-dot:hover {
     box-shadow: 0 0 1px 3px rgba(235,16,16,0.5);
   }
+  .reviewcard{
+    height: 200px;
+    width: 460px;
+  }
+  @media (max-width:600px) {
+    .reviewcard{
+      height: 280px;
+      width: 200px;
+
+    }
+  }

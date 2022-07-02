@@ -2,10 +2,13 @@
 
 import React from "react";
 import { toast } from "react-toastify";
-
+// react query use kora hoise
 const UserRow = ({ user, refetch }) => {
   const { email, role,_id } = user;
-  const makeAdmin = () => {
+// amra chaile make admin function theke alada alada vabe prottok er jonno email na die sorasori email 12 number line a die dile o cholbe .ata react er technic.and moja
+  const makeAdmin = (email) => {
+
+
     fetch(`https://secret-journey-33210.herokuapp.com/user/admin/${email}`, {
       method: "PUT",
       headers: {
@@ -46,7 +49,9 @@ const UserRow = ({ user, refetch }) => {
       <td>{email}</td>
       <td>
         {role !== "admin" && (
-          <button onClick={makeAdmin} class="btn btn-xs">
+          <button onClick={()=>{
+            makeAdmin(email)
+          }} class="btn btn-xs">
             Make Admin
           </button>
         )}

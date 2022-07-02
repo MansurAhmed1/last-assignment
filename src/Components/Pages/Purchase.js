@@ -123,10 +123,10 @@ const Purchase = () => {
                   Your Name
                 </label>
                 <input
+                className="border border-black p-1"
                   type="text"
                   name="name"
                   id="name"
-                  className=""
                   value={user?.displayName}
                   disabled
                   placeholder="Enter Your  Name"
@@ -139,11 +139,13 @@ const Purchase = () => {
                   Your Email
                 </label>
                 <input
+                className="border border-black p-1"
                   type="email"
                   name="email"
                   id="email"
-                  value={user?.email}
-                  readOnly
+                  defaultValue={user?.email}
+          
+           
                   placeholder="Enter Your Email"
                   required
                 />
@@ -153,6 +155,7 @@ const Purchase = () => {
                   Product Name
                 </label>
                 <input
+                className="border border-black p-1"
                   id="poductName"
                   type="text"
                   name="poductName"
@@ -167,6 +170,7 @@ const Purchase = () => {
                   Product Price
                 </label>
                 <input
+                className="border border-black p-1"
                   id="productPrice"
                   type="number"
                   name="productPrice"
@@ -181,6 +185,7 @@ const Purchase = () => {
                   Product Quantity
                 </label>
                 <input
+                className="border border-black p-1"
                   id="productQuantity"
                   type="number"
                   name="productQuantity"
@@ -195,6 +200,7 @@ const Purchase = () => {
                   Mobile
                 </label>
                 <input
+                className="border border-black p-1"
                   id="mobile"
                   type="tel"
                   name="mobile"
@@ -207,6 +213,7 @@ const Purchase = () => {
                   Address
                 </label>
                 <input
+                className="border border-black p-1"
                   id="address"
                   type="text"
                   name="address"
