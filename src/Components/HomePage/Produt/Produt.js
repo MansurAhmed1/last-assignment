@@ -9,7 +9,7 @@ const Produt = () => {
   useEffect(() => {
     fetch("https://secret-journey-33210.herokuapp.com/service")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => setServices(data.slice(0,5)));
   }, [services]);
   return (
     <div className=" mb-36 mt-12">

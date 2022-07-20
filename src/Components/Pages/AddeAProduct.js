@@ -267,7 +267,7 @@ const AddeAProduct = () => {
           <input
             className="btn w-full   hover:bg-stone-700 text-white"
             type="submit"
-            value="conform order"
+            value="add product"
           />
         </form>
       </div>

@@ -10,7 +10,7 @@ const MyOrders = () => {
   const [user] = useAuthState(auth);
 
   const handleDelete = (id) => {
-    const procced = window.confirm("Are You sure Want to delete this book?");
+    const procced = window.confirm("Are You sure Want to delete this product?");
     if (procced) {
       const url = `https://secret-journey-33210.herokuapp.com/delete/${id}`;
       fetch(url, {

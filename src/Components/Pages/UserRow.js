@@ -30,7 +30,7 @@ const UserRow = ({ user, refetch }) => {
   };
 
   const handleDelete = (id) => {
-    const procced = window.confirm("Are You sure Want to delete this book?");
+    const procced = window.confirm("Are You sure Want to delete this product?");
     if (procced) {
       const url = `https://secret-journey-33210.herokuapp.com/user/${id}`;
       fetch(url, {

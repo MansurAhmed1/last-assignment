@@ -76,7 +76,7 @@ useEffect(() => {
   const email = user?.email;
   fetch(`https://secret-journey-33210.herokuapp.com/profile?email=${email}`)
     .then((res) => res.json())
-    .then((data) => setProfileData(data));
+    .then((data) => setProfileData(data.slice(0,1)));
 }, [user, profileData, profileData.length]);
 console.log(profileData.length);
 return (
