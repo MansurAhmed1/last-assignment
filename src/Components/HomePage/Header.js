@@ -146,7 +146,7 @@ const Header = () => {
   console.log(navTrigger)
 
   return (
-    <header style={{borderBottom:"1px solid black"}} className=' py-6 bg-white  sticky top-0 z-30 '>
+    <header style={{borderBottom:"1px solid black"}} className=' py-6 bg-white sticky top-0 z-30 '>
     <nav className='w-full lg:w-11/12 mx-auto relative lg:px-1 px-5 '>
         <div className='flex justify-between items-center'>
             <div className='navLeft flex items-center '>
@@ -172,7 +172,7 @@ const Header = () => {
             
 
             </div>
-            <div className='navRight'>
+            <div className='navRight '>
                <div className=' hidden lg:block '>
                <div className='flex '>
                <CustomLink className='mx-2 px-2 py-1  text-black  headerAnchor ' to={"/"}>Home</CustomLink>
@@ -180,7 +180,7 @@ const Header = () => {
                <CustomLink className='mx-2 px-2 py-1  text-black  headerAnchor ' to={"/blog"}>Blog</CustomLink>
                {user && (
           
-                  <CustomLink className='mx-2 px-2 py-1  text-black headerAnchor  ' to="/dashboard">Dashboard</CustomLink>
+                  <CustomLink className='mx-2 px-2 py-1   text-black headerAnchor  ' to="/dashboard">Dashboard</CustomLink>
          
               )}
               {user ? (
