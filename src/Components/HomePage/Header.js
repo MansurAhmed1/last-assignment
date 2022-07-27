@@ -128,8 +128,7 @@
 
 
 import React, {useState} from 'react';
-// import menuIcon from '../../image/image/menuIcon3.png'
-// import crossIcon from '../../image/image/CrossIcon3.png'
+
 import { signOut } from "firebase/auth";
 
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -145,7 +144,7 @@ const Header = () => {
   };
   const [navTrigger,setNavTrigger]=useState(false)
   console.log(navTrigger)
-  // pb-4
+
   return (
     <header style={{borderBottom:"1px solid black"}} className=' py-6 bg-white  sticky top-0 z-30 '>
     <nav className='w-full lg:w-11/12 mx-auto relative lg:px-1 px-5 '>

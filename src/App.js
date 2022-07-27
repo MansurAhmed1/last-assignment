@@ -27,11 +27,11 @@ import Purchase from "./Components/Pages/Purchase";
 import Problem from "./Components/Problem";
 
 import Loading from "./Components/Shared/Loading";
-import {ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <div className="App">
-       <ToastContainer ></ToastContainer>
+      <ToastContainer></ToastContainer>
       <Header></Header>
 
       <Routes>

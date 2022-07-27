@@ -23,7 +23,7 @@ const AddeAProduct = () => {
   const [user] = useAuthState(auth);
 
 
-  //// //////////////imgbb api key////////////////////
+  //////////////////imgbb api key////////////////////
   const imageStorageKey = "4295ac4d47b569312bea67b440cdbdbb";
   //// //////////////imgbb api key////////////////////
 
